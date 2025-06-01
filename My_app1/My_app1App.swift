@@ -11,7 +11,25 @@ import SwiftUI
 struct My_app1App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                NavigationStack {
+                    ContentView(location: Locations().primary)
+                }
+                .tabItem {
+                    Text("Discover")
+                    Image(systemName: "airplane.circle.fill")
+                }
+                
+                NavigationStack {
+                    WorldView()
+                }
+                .tabItem {
+                    Text("World")
+                    Image(systemName: "globe")
+                }
+            }
         }
     }
 }
+    
+
