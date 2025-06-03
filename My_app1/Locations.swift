@@ -13,7 +13,7 @@ class Locations: ObservableObject {
     var primary: Location {
         places[0]
     }
-    
+     
     init() {
         let url = Bundle.main.url(forResource: "locations", withExtension: "json")!
         let data = try! Data(contentsOf: url)

@@ -26,6 +26,7 @@ struct ContentView: View {
                 .foregroundStyle(.secondary)
             
             Text(location.description)
+                .padding(.horizontal, 5)
             
             Text("Did you know?")
                 .font(.title3)
@@ -33,6 +34,7 @@ struct ContentView: View {
                 .padding(.top)
             
             Text(location.more)
+                .padding(.horizontal, 5)
         }
         .navigationTitle("Discover")
     }
